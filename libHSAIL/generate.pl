@@ -1376,7 +1376,7 @@ sub makeWrappers {
     print map { "class $_->{wname};\n" } grep { !$_->{nowrap} } @sortedStructs;
     print "\n\n";
 
-    for my $tname (keys %$typedefs) {
+    for my $tname (sort keys %$typedefs) {
 
         my $type = $typedefs->{$tname};
         my $prop = $type->{'bitmask'};
